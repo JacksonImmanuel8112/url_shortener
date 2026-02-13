@@ -112,3 +112,4 @@ D:\Jackson - Workspace\urlshortner\urlshortner\obj\Debug\net8.0\urlshortner.pdb
 D:\Jackson - Workspace\urlshortner\urlshortner\obj\Debug\net8.0\urlshortner.genruntimeconfig.cache
 D:\Jackson - Workspace\urlshortner\urlshortner\obj\Debug\net8.0\ref\urlshortner.dll
 D:\Jackson - Workspace\urlshortner\urlshortner\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+D:\Jackson - Workspace\urlshortner\urlshortner\obj\Debug\net8.0\urlshortner.sourcelink.json

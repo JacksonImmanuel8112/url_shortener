@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System;
 using urlshortner.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,13 @@ builder.Services.AddDbContext<AppContextDb>(
     options => options.UseNpgsql(constr));
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<AppContextDb>();
+    db.Database.Migrate();
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

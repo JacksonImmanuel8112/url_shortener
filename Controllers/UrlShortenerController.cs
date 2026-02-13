@@ -21,10 +21,10 @@ namespace urlshortner.Controllers
         }
 
         [HttpPost("shorten")]
-        public async Task<IActionResult> Shorten([FromBody] string surl)
+        public async Task<IActionResult> Shorten([FromBody] UrlManagementRequest surl)
         {
 
-            if(!Uri.IsWellFormedUriString(surl, UriKind.Absolute))
+            if(!Uri.IsWellFormedUriString(surl.Url, UriKind.Absolute))
             {
                 return BadRequest("Invalid Url");
             }
@@ -32,7 +32,7 @@ namespace urlshortner.Controllers
 
             var url = new UrlManagement
             {
-                Url = surl,
+                Url = surl.Url,
                 ShortenUrl = shortcode
 
             };
